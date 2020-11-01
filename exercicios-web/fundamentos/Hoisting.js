@@ -1,0 +1,1 @@
+// Hoisting é um comportamento padrão do JavaScript de mover as declarações com a palavra reservada 'var' para o topo.
