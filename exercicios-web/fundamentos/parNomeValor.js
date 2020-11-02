@@ -6,7 +6,7 @@ function exec() {
   return introductions;
 }
 
-// const introductions = 'Holla' // Erro! (Constantes 'introductions' sendo declarada mais de uma vez no mesmo esscopo/contexxto léxico)
+// const introductions = 'Holla' // Erro! (Constantes 'introductions' sendo declarada mais de uma vez no mesmo escopo/contexxto léxico)
 
 // Objetos são conjuntos aninhados de pares Nome/Valor
 const client = {
