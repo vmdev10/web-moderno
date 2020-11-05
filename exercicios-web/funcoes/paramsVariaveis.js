@@ -8,12 +8,12 @@ function soma() {
     // A partir de 'i' é possível acessar qualquer índice do elemento que foi passado como argumentos pra essa função
     soma += arguments[i];
   }
-  return soma
+  return soma;
 }
 
-console.log(soma())
-console.log(soma(1))
-console.log(soma(1.1, 2.2, 3.3))
+console.log(soma());
+console.log(soma(1));
+console.log(soma(1.1, 2.2, 3.3));
 
-console.log(soma(1.1, 2.2, 'teste'))
-console.log(soma('a', 'b', 'c'))
+console.log(soma(1.1, 2.2, "teste"));
+console.log(soma("a", "b", "c"));
