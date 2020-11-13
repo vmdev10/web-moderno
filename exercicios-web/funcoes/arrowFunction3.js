@@ -1,7 +1,7 @@
 /*
 THIS
     Numa função arrow, o this é fixo, isto quer dizer que ele é baseado no contexto onde a função foi escrita/definida
-    e a forma como a função foi chamado não altera o seu valor.
+    e a forma como a função e chamada não altera o seu valor.
 */
 
 // O valor do This dentro de uma função tradicional em JavaScript varia de acordo com a chamada da função
@@ -11,8 +11,8 @@ let comparaComThis = function (param) {
 };
 comparaComThis(global);
 
-// O this na função tradicional integrada com a função bind, permite especificar o o objeto para qual o this era apontar
-// Nesse caso o objeto especificado foi o {obj}. Logo ela deixa de apontar para o contexto global
+// O this na função tradicional integrada com a função bind, permite especificar o o objeto para qual o this irá apontar
+// Nesse caso o objeto especificado foi o {obj}. Logo ele deixa de apontar para o contexto global
 const obj = {};
 comparaComThis = comparaComThis.bind(obj);
 comparaComThis(global);

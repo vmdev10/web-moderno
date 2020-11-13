@@ -1,6 +1,6 @@
 /*
 Função construtora
-    Permite criar/instanciar objetos a partit de uma função
+    Permite criar/instanciar vários objetos a partir de uma única função
     Os atributos podem ser criados de forma privada ou pública
 
 Para criar um atributo privado, basta declara-lo dentro de uma váriavel com a palavra-chave let ou const(Caso seja uma constante) dentro da função

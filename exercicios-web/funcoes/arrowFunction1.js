@@ -1,9 +1,9 @@
-// Função tradicionales
+// Função tradicional
 let dobro = function (a) {
   return 2 * a;
 };
 
-// Arrow function 1
+// Arrow function 1 // Arrow function sempre será uma função anônima, deverá ser armazenada em uma variável.
 dobro = (a) => {
   return 2 * a;
 };
