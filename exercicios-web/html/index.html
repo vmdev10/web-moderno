@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios HTML</title>
+  </head>
+  <body>
+    <header>Exercícios HTML</header>
+    <nav>
+      <a href wm-nav="exercicios/teste.html">Teste</a><br>
+      <a href wm-nav="exercicios/teste2.html">Teste2</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>Curso de Web Moderno</footer>
+    <script>
+      // Retorna um array de tags
+      document.querySelectorAll("[wm-nav]").forEach((link) => {
+        const conteudo = document.getElementById("conteudo");
+        link.onclick = function (e) {
+          e.preventDefault(); // Vai previnir o comportamento padrão, que é a navegação para outra página ocorra
+          fetch(link.getAttribute('wm-nav')) // Requisição AJAX em cima do atributo href que é quem me dá o link da página
+            .then((resp) => resp.text()) // Receber na resposta todo o conteúdo textual da página.
+            // Quando a função text() for resolvida, eu tenho a minha disposição o conteúdo html
+            .then((html) => (conteudo.innerHTML = html)); // Logo o conteúdo da section conteudo será substituído pelo conteúdo html
+        };
+      });
+    </script>
+  </body>
+</html>
