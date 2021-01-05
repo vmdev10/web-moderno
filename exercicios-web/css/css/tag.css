@@ -1,0 +1,21 @@
+body {
+  font-size: 40px;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+li {
+  margin-left: 60px;
+}
+
+.tag {
+  border: 4px solid;
+  margin: 5px;
+}
+
+.tag label {
+  color: #fff;
+}
