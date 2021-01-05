@@ -33,8 +33,8 @@ console.log(algunsPilotos2);
 // Concat()
 //  Cria um novo array mesclando(concatenando) arrays existentes
 
-const arr1 = ["Cecilie", "Lone"]
-const arr2 = ["Emil", "Tobias", "Linus"]
-const arr3 = ["Robin", "Morgan"]    
-let myChidren = arr1.concat(arr2, arr3, 'Peter')
-console.log(myChidren)
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+let myChidren = arr1.concat(arr2, arr3, "Peter");
+console.log(myChidren);
