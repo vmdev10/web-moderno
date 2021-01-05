@@ -1,3 +1,15 @@
+// Se uma chamada de função for precedida pela newpalavra-chave, é uma chamada de construtor.
+// Parece que você criou uma nova função, mas como as funções JavaScript são objetos, você na verdade cria um novo objeto:
+// A this.palavra-chave no construtor não possui um valor.
+//O valor de this será o novo objeto criado quando a função for chamada
+function myFunction(argument1, argument2) {
+  this.firstName = argument1;
+  this.lastName = argument2;
+}
+
+const x = new myFunction('Ana', 'Vitória')
+console.log(x.firstName + ' ' + x.lastName)
+
 /*
 Função construtora
     Permite criar/instanciar vários objetos a partir de uma única função

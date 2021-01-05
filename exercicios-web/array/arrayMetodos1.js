@@ -29,3 +29,12 @@ console.log(algunsPilotos1);
 
 const algunsPilotos2 = pilotos.slice(2, 4); // O último elemento não está incluso
 console.log(algunsPilotos2);
+
+// Concat()
+//  Cria um novo array mesclando(concatenando) arrays existentes
+
+const arr1 = ["Cecilie", "Lone"]
+const arr2 = ["Emil", "Tobias", "Linus"]
+const arr3 = ["Robin", "Morgan"]    
+let myChidren = arr1.concat(arr2, arr3, 'Peter')
+console.log(myChidren)

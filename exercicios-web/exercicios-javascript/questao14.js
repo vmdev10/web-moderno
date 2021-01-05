@@ -1,4 +1,4 @@
-const vendaDeFrutas = function (fruta = "melancia") {
+function vendaDeFrutas(fruta) {
   switch (fruta) {
     case "maçã":
       console.log("Não vendemos essa fruta aqui!");
@@ -12,9 +12,8 @@ const vendaDeFrutas = function (fruta = "melancia") {
     default:
       console.log("Erro!");
   }
-};
+}
 
-vendaDeFrutas();
 vendaDeFrutas("maçã");
 vendaDeFrutas("banana");
 vendaDeFrutas("melancia");

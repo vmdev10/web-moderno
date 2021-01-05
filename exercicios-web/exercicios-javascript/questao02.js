@@ -1,14 +1,11 @@
 function classificacaoTriangulo(a = 1, b = 1, c = 1) {
   if (a <= b + c && b <= a + c && c <= a + b) {
     if (a === b && b === c) {
-      const trianguloEquilatero = "É um triângulo equilátero";
-      return trianguloEquilatero;
+      return "É um triângulo equilátero";
     } else if (a === b || b === c || c === a) {
-      const trianguloIsosceles = "É um triângulo isósceles";
-      return trianguloIsosceles;
+      return "É um triângulo isósceles";
     } else {
-      const trianguloEscaleno = "É um triângulo escaleno";
-      return trianguloEscaleno;
+      return "É um triângulo escaleno";
     }
   }
   const erro = "Não é um triângulo";

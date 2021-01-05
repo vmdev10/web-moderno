@@ -1,6 +1,8 @@
-const exponenciacao = () => Math.pow(a, b);
+// Método antigo
+let exponenciacao = (base, expoente = 2) => {return Math.pow(base, expoente)}
 
-console.log(exponenciacao(2, 3));
-console.log(exponenciacao(2));
-console.log(exponenciacao(5, 0));
-console.log(exponenciacao(2, 3));
+// Método novo
+exponenciacao = (base, expoente= 2) => {return base ** expoente}
+
+console.log(exponenciacao(2, 2))
+console.log(exponenciacao(3))

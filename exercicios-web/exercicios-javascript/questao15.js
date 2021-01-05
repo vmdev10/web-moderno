@@ -1,4 +1,4 @@
-function revendaDeCarros(modeloDoCarro = "hatch") {
+function revendaDeCarros(modeloDoCarro) {
   switch (modeloDoCarro) {
     case "hatch":
       console.log("Compra efetuada com sucesso.");
@@ -13,7 +13,6 @@ function revendaDeCarros(modeloDoCarro = "hatch") {
   }
 }
 
-revendaDeCarros();
 revendaDeCarros("motocicletas");
 revendaDeCarros("hatch");
 revendaDeCarros("esportivo");

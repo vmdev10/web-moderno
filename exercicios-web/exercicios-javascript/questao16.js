@@ -1,32 +1,26 @@
-const calculadoraBasica = function (valor1 = 1, operacao = '+', valor2 = 1) {
+const calculadoraBasica = function (valor1 = 1, operacao = "+", valor2 = 1) {
   switch (operacao) {
     case "+":
       const soma = valor1 + valor2;
-      console.log(`A soma entre ${valor1} e ${valor2} é igual a ${soma}`);
-      break;
+      return `A soma entre ${valor1} e ${valor2} é igual a ${soma}`;
     case "-":
       const subtracao = valor1 - valor2;
-      console.log(
-        `A subtracao entre ${valor1} e ${valor2} é igual a ${subtracao}`
-      );
-      break;
+      return `A subtracao entre ${valor1} e ${valor2} é igual a ${subtracao}`;
+
     case "*":
       const multiplicacao = valor1 * valor2;
-      console.log(
-        `A multiplicação entre ${valor1} e ${valor2} é igual a ${multiplicacao}`
-      );
-      break;
+      return `A multiplicação entre ${valor1} e ${valor2} é igual a ${multiplicacao}`;
+
     case "/":
       const divisao = valor1 / valor2;
-      console.log(`A divisão entre ${valor1} e ${valor2} é igual a ${divisao}`);
-      break;
+      return `A divisão entre ${valor1} e ${valor2} é igual a ${divisao}`;
+
     default:
-      console.log(`Operação inválida!`);
+      return `Operação inválida!`;
   }
 };
-calculadoraBasica()
-calculadoraBasica(5, "*", 3);
-calculadoraBasica(17, "+", 3);
-calculadoraBasica(256, "/", 16);
-calculadoraBasica(8, "-", 9);
-
+console.log(calculadoraBasica());
+console.log(calculadoraBasica(5, "*", 3));
+console.log(calculadoraBasica(17, "+", 3));
+console.log(calculadoraBasica(256, "/", 16));
+console.log(calculadoraBasica(8, "-", 9));

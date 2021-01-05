@@ -1,4 +1,4 @@
-const multiploDe3 = (numeroInteiro = 3) => numeroInteiro % 3 === 0 ? 'True' : 'False';
+const multiploDe3 = (numeroInteiro) => numeroInteiro % 3 === 0 ? 'True' : 'False';
 
 console.log(multiploDe3());
 console.log(multiploDe3(9));
