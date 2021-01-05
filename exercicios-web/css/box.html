@@ -5,7 +5,22 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        body {
+            font-size: 80px;
+            margin: 0;
+        }
+        .c1 {background-color: orange;}
+        .c2 {background-color: skyblue;}
+        .c3 {background-color: tomato;}
+
+        div {
+            float: left; /* Evita o margin collapse, isto é, a sbreposição das margens*/
+            padding-top: 100px;
+            padding: 10px 50px 100px 150px;
+            padding: 100px 50px;
+            margin: 0px 20px;
+            border: 15px solid black;
+        }
     </style>
 </head>
 
