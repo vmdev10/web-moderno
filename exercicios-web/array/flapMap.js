@@ -27,9 +27,8 @@ const escola = [
   },
 ];
 
+const getNotaDoAluno = (aluno) => aluno.nota;
+const getNotaDaTurma = (turma) => turma.alunos.map(getNotaDoAluno);
 
-const getNotaDoAluno = aluno => aluno.nota
-const getNotaDaTurma = (turma) => turma.alunos.map(getNotaDoAluno)
-
-const notas1 = escola.map(getNotaDaTurma)
-console.log(notas1)
+const notas1 = escola.map(getNotaDaTurma);
+console.log(notas1);
