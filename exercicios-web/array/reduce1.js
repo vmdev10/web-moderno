@@ -6,9 +6,11 @@ const alunos = [
 ];
 
 // 0 -> Valor inicial, caso não seja passado, o primeiro elemento do array será o valor inicial
-const resultado = (alunos.map(e => e.nota)).reduce(function(acumulador, valorAtual){
-    console.log(`${acumulador} ${valorAtual}`)
-    return acumulador + valorAtual
-}, 0)
+const resultado = alunos
+  .map((e) => e.nota)
+  .reduce(function (acumulador, valorAtual) {
+    console.log(`${acumulador} ${valorAtual}`);
+    return acumulador + valorAtual;
+  }, 0);
 
-console.log(resultado)
+console.log(resultado);

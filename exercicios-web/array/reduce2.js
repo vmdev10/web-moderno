@@ -7,13 +7,12 @@ const alunos = [
 
 // Desafio 1: Todos os alunos são bolsistas?
 // Desafio 2: Algum aluno é bolsista?
-const todosBolsistas = function(resultado, bolsista) {
-    return resultado && bolsista
-}
-console.log(alunos.map(e => e.bolsista).reduce(todosBolsistas))
+const todosBolsistas = function (resultado, bolsista) {
+  return resultado && bolsista;
+};
+console.log(alunos.map((e) => e.bolsista).reduce(todosBolsistas));
 
-const algumBolsista = function(resultado, bolsista) {
-    return resultado || bolsista
-}
-console.log(alunos.map(e => e.bolsista).reduce(algumBolsista))
-
+const algumBolsista = function (resultado, bolsista) {
+  return resultado || bolsista;
+};
+console.log(alunos.map((e) => e.bolsista).reduce(algumBolsista));
