@@ -5,7 +5,34 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+        ul {
+            padding: 0;
+        }
+        div {
+            background-color: seagreen;
+        }
+        span {
+            background-color: dodgerblue
+        }
+        li {
+            background-color: purple;
+        }
+        div, span, li {
+            width: 50%; 
+            width: 200px;
+            height: 80px;
+            /* As propriedades width e hight não são aplicadas a elementos com display inline */
+            padding-top: 30px;
+            text-align:center;
+            display: inline;
+            display: block;
+            display: inline-block;
+        }
     </style>
 </head>
 
