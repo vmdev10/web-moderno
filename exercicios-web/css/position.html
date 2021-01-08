@@ -1,26 +1,96 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Position</title>
     <style>
-        /* ... */
-    </style>
-</head>
+      body {
+        margin: 0;
+      }
+      div {
+        font-size: 40px;
+        padding: 30px;
+        height: 150px;
+        width: 150px;
+        border: solid 5px #222;
+        color: #fff;
+      }
 
-<body>
+      .static {
+        background-color: #2ff;
+        /* Position padrão do browser
+            Não aceita as propriedades de locomoção abaixo */
+        top: 100px;
+        left: 100px;
+      }
+
+      .fixed {
+        background-color: #ff99ff;
+        position: fixed;
+        /* 
+            Mudança de contexto ;
+            Mover o elemento em relação a tela;
+            Sempre fixo mesmo com a rolagem. */
+        right: 0px;
+        top: 0;
+      }
+
+      .relative1 {
+        background-color: #f5f557;
+        position: relative;
+        bottom: 216px;
+        /* 50% em relação de onde o elemento começa*/
+        left: 50%;
+        /* Para alinhar o elemento em 50% (-) define o valor para a esquerda */
+        transform: translateX(-50%);
+      }
+
+      .absolute1 {
+        background-color: #87f687;
+        position: absolute;
+        top: 216px;
+        left: 25%;
+        transform: translateX(-25%);
+      }
+
+      .absolute2-dad {
+        background-color: #d365e2;
+        position: absolute;
+        top: 216px;
+        right: 25%;
+        transform: translateX(25%);
+      }
+
+      .absolute2 {
+        background-color: #222;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      .sticky {
+        background-color: #ec4a4a;
+        position: -webkit-sticky; /* safari */
+        position: sticky;
+        top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="static">Static (Padrão)</div>
     <div class="fixed">Fixed</div>
     <div class="relative1">Relative</div>
     <div class="absolute1">Absolute</div>
 
-    <div class="relative2">
-        <div class="absolute2"></div>
+    <div class="absolute2-dad">
+      <div class="absolute2"></div>
     </div>
 
     <div class="sticky">Sticky</div>
-    <p style="padding-bottom: 2000px;">Opa</p>
-</body>
-
+    <p style="padding-bottom: 2000px">Opa</p>
+  </body>
 </html>
