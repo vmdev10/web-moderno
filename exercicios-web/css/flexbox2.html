@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Flexbox #02</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="css/tag.css" />
     <style>
-        /* ... */
-    </style>
-</head>
+      div {
+        border: 5px solid dodgerblue;
+        font-size: 40px;
+      }
+      .flex-container div {
+        box-sizing: border-box;
+        width: 100px;
+        /* Aumentar o tamanho dos flex items proporcionalmete ao peso de cada uma, 
+            definido pela propriedade flex-grow */
+        flex-grow: 0;
+        flex-grow: 1;
+      }
+      .flex-container {
+        display: flex;
+        height: 300px;
+        width: 600px;
+      }
+      .flex-container div:nth-child(3) {
+        background-color: #7c45d6;
+        /* Mudando a ordem de um elemento específico
+            Por padrão a ordem de cada elemento é 0 */
+        order: 1;
+        order: 0;
+        order: -1;
 
-<body>
+        /* Alinhas os flex-items */
+        align-self: flex-start;
+        align-self: flex-end;
+        align-self: center;
+        align-self: stretch;
+      }
+      .flex-container div:nth-child(3) {
+        flex-grow: 3;
+      }
+      .flex-container {
+        width: 300px;
+        flex-shrink: 1;
+      }
+      .flex-container div:nth-child(3) {
+        flex-shrink: 3;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="flex-container tag nolabel">
-        <div class="tag nolabel">1</div>
-        <div class="tag nolabel">2</div>
-        <div class="tag nolabel">3</div>
-        <div class="tag nolabel">4</div>
+      <div class="tag nolabel">1</div>
+      <div class="tag nolabel">2</div>
+      <div class="tag nolabel">3</div>
+      <div class="tag nolabel">4</div>
     </div>
     <script src="js/tag.js"></script>
-</body>
-
+  </body>
 </html>
