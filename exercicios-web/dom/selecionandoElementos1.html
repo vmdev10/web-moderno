@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+      // Propriedade classList é útil para adicionr, remover ou alternar classes CSS
+      document.getElementById("primeiro").classList.add("destaque"); // Adicionando a classe destaque
+
+      const divs = document.getElementsByTagName("div");
+      // Para converter um htm.collection (Retornado em divs) para um Array, ultiliza-se uma das seguintes maneiras:
+      Array.from(divs).forEach((e) => e.classList.remove("destaque"));
+      const divsArray = [...divs];
+      divsArray.forEach((e) => e.classList.add("destaque"));
+
+      const ultimosElementos = document.getElementsByClassName("ultimo");
+      for (let e of ultimosElementos) {
+        e.classList.remove("destaque");
+      }
+    </script>
+  </body>
+</html>
