@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>
+      const idtipo = document
+        .querySelector("#primeiro")
+        .classList.add("destaque");
+
+      // Criando uma função para add e remever a classe destaque
+      // document.querySelector/All retorna um node.List que aceita o forEach, porém para outras funcionalidades do Array,
+      // é preciso converte-lo para um array --> Array.from(document.querySelector/All) ou [...document.querySelector/All]
+      const selecionar = (seletor) => {
+        document
+          .querySelectorAll(seletor)
+          .forEach((e) => e.classList.add("destaque"));
+      };
+      const deselecionar = (seletor) => {
+        document
+          .querySelectorAll(seletor)
+          .forEach((e) => e.classList.remove("destaque"));
+      };
+      selecionar("#primeiro");
+      selecionar("div");
+      deselecionar("*");
+      selecionar(".terceiro.ultimo");
+      deselecionar("*");
+      selecionar(":not(#primeiro)"); // Negação em cima de um seletor
+      deselecionar("*");
+      selecionar(":nth-child(1)");
+      deselecionar("*");
+      selecionar("span:nth-child(1)");
+    </script>
+  </body>
+</html>
