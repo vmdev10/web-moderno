@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <!-- onclick="navegarEm5seg(event)" Manipuladores de eventos in-line não são uma boa prática -->
+        <a wait href="https://www.google.com.br/">Google</a>
+    </div>
+    <script>
+        const a = document.querySelector('[wait]')
+        function navegarEm5seg(event) {
+            event.preventDefault()
+            setTimeout(() => {
+                const link = event.target // Referenciar o elemento em que o evento acabou de ocorrer
+                // console.log('window.location.href', window.location.href) Retorna a URL da página atual
+                window.location.href = link.href
+            }, 5000)
+            console.log('Saindo em 5s...')
+        }
+        a.onclick = navegarEm5seg
+    </script>
+</body>

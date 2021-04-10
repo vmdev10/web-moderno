@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>XMLHttpRequest #01</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+
+  <body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+    <script>
+      function ajax(config) {
+        const xhr = new XMLHttpRequest();
+        // Abrindo uma requisição ajax, 1° param o método da requisição
+        // 2° param url
+        // 3° param diz que a requisição é feita de forma async'
+        xhr.open(config.method, config.url, true);
+
+        xhr.onload = (e) => {
+          if (xhr.status === 200) {
+            config.success(xhr.response);
+          } else if (xhr.status >= 400) {
+            config.error({
+              code: xhr.status,
+              text: xhr.statusText,
+            });
+          }
+        };
+
+        xhr.send();
+      }
+
+      ajax({
+        url: "/data/states.json",
+        method: "GET",
+        success(response) {
+          const states = JSON.parse(response);
+
+          // Array States, para cada state eu crio os elementos para DOM
+          const rows = states.map((state) => {
+            // Passando os elementos para a DOM
+            const tdId = document.createElement("td");
+            tdId.innerHTML = state.id;
+
+            const tdName = document.createElement("td");
+            tdName.innerHTML = state.name;
+
+            const tdInitials = document.createElement("td");
+            tdInitials.innerHTML = state.initials;
+
+            const tr = document.createElement("tr");
+
+            tr.appendChild(tdId);
+            tr.appendChild(tdName);
+            tr.appendChild(tdInitials);
+
+            return tr;
+          });
+          const table = document.createElement("table");
+          rows.forEach((row) => table.appendChild(row));
+          document.body.appendChild(table);
+        },
+        error(e) {
+          const errorMessage = document.createTextNode(`${e.code}: ${e.text}`);
+          document.body.appendChild(errorMessage);
+        },
+      });
+    </script>
+  </body>
+</html>
