@@ -11,6 +11,27 @@
     <h1>Estados</h1>
 
     <script>
+        const url = './data/states.json'
+        fetch(url)
+            .then(resp => resp.json())
+            .then(states => states.reduce(()))
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
         const url = "data/states.json"
         fetch(url)
             .then(response => response.json()) // Configura os dados para deixa-lo manipuláveis
@@ -21,5 +42,5 @@
                 // insertAdjacentHTML: Este método insere um texto específico, como HTML, em uma posição especificada no documento
                 document.body.insertAdjacentHTML('beforeEnd', `<ol>${items}</ol>`)
             })
-    </script>
+    </script> -->
 </body>
